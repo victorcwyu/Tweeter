@@ -1,9 +1,19 @@
 // A page can't be manipulated safely until the document is "ready." jQuery detects this state of readiness for you.
 // Code included inside $(document).ready() will only run once the page Document Object Model(DOM) is ready for JavaScript code to execute
 
+const escape = function (str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
 $(document).ready(function () {
-  
-  loadtweets();
+
+  $("#click").click(function () {
+    $("#new-tweet").slideToggle("slow", function () {
+    });
+  });
+
 
   const $form = $('#newbie');
   $form.on('submit', function (event) {
@@ -22,6 +32,8 @@ $(document).ready(function () {
       data: $form.serialize(),
       // successful post renders updated list of tweets
       success: function() {
+        $('#twit').val('')
+        $('.counter').text(140)
         loadtweets();
       }
     });
@@ -74,7 +86,7 @@ const createTweetElement = (tweetData) => {
       </div>
       <span class="handle">${tweetData.user.handle}</span>
     </header>
-    <p>${tweetData.content.text}</p>
+    <p>${escape(tweetData.content.text)}</p>
     <footer>
       <p>${date}</p>
       <div class="linkage">
@@ -90,3 +102,4 @@ const createTweetElement = (tweetData) => {
 };
 
 //deleted renderTweets
+

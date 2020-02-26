@@ -44,8 +44,11 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span class="logo">tweeter</span>
-      <p><span class ="bold-700">Write</span> a new tweet</p>
-      
+      <div class="newButton">
+        <p><span class ="bold-700">Write</span> a new tweet</p>
+        <img id="click" src="/images/nic-cage-small.jpeg">
+        <!-- <i class="fas fa-angle-double-down"></i> -->
+      </div>
     </nav>
 
     <!-- Header -->
@@ -63,12 +66,13 @@
     <main class="container">
 
       <!-- New Tweets Section -->
-      <section class="new-tweet">
+      <section id="new-tweet">
         <form id="newbie" action="/tweets/" method="POST">
           <textarea id="twit" name="text" placeholder="What are you humming about?"></textarea>
           <input type="submit" value="Tweet">
           <span class="counter">140</span>
         </form>
+      </section>
       
         <!-- Tweets Section -->
       <section id="tweet-container">

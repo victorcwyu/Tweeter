@@ -61,13 +61,16 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+
+      <!-- New Tweets Section -->
       <section class="new-tweet">
-        <form action="/tweets/" method="POST">
+        <form id="newbie" action="/tweets/" method="POST">
           <textarea id="twit" name="text" placeholder="What are you humming about?"></textarea>
           <input type="submit" value="Tweet">
           <span class="counter">140</span>
         </form>
-
+      
+        <!-- Tweets Section -->
       <section id="tweet-container">
           <article>
             <header>
@@ -80,21 +83,15 @@
             <p>THE BEES!</p>
             <footer>
               <p>10 days ago</p>
-
               <div class="linkage">
                 <i class="fas fa-flag"></i>
                 <i class="fas fa-retweet"></i>
                 <i class="fas fa-heart"></i>
               </div>
-
             </footer>
           </article>
-
-
       </section>
-
-
-      </section>
+      
     </main>
   </body>
 </html>

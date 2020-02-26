@@ -1,0 +1,36 @@
+textarea {
+  background-color: #f4f1ec;
+  border: none;
+  border-bottom: solid #545149 5px;
+  font-weight: 700;
+  height: 50px;
+  width: 100%;
+  resize: none;
+  margin-bottom: 5px;
+}
+
+::placeholder {
+  color: #545149;
+}
+
+input {
+  background-color: #4056A1;
+  color: white;
+  font-family: 'Bungee', 'sans-serif' ;
+  font-size: 20px;
+  padding: 5px 10px;
+}
+
+form {
+  position: relative;
+}
+
+.counter {
+  font-family: 'Bungee', 'sans-serif' ;
+  position: absolute;
+  right: 0;
+}
+
+.invalid {
+  color: red;
+}

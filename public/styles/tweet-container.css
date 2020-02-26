@@ -1,0 +1,64 @@
+.handle {
+  display: none;
+}
+
+article:hover .handle {
+  display: block
+}
+
+article:hover {
+  box-shadow: 10px 10px black;
+}
+
+article {
+  border: solid #545149 5px;
+  margin: 50px 0;
+}
+
+article header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+article header h2 {
+  color: white;
+  font-weight: 300;
+  margin: 0;
+}
+
+article header p {
+  border: none;
+  margin: 10px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+article p {
+  border-bottom: solid #545149 5px;
+  margin: 10px;
+}
+
+article footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+article footer p {
+border: none;
+font-size: 18px;
+}
+
+.linkage {
+  margin-right: 10px;
+}
+
+i {
+  font-size: 18px;
+}
+

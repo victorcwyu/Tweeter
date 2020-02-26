@@ -4,9 +4,17 @@
 $(document).ready(function () {
   
   loadtweets();
+
   const $form = $('#newbie');
   $form.on('submit', function (event) {
     event.preventDefault()
+    if ($('#twit').val().length > 140) {
+      alert("Your tweet is too long!");
+      return;
+    } else if ($('#twit').val() === "") {
+      alert("You haven't entered a tweet!");
+      return;
+    }
     // Post serialized data to AJAX, to add new tweet
     $.ajax({
       url: '/tweets',
@@ -14,10 +22,14 @@ $(document).ready(function () {
       data: $form.serialize(),
       // successful post renders updated list of tweets
       success: function() {
-        loadtweets()
+        loadtweets();
       }
-    }
-    )
+    });
+
+    //this is the another way of posting serialized data to AJAX
+    // $.ajax('/tweets', { method: 'POST', data: $form.serialize()})
+    //   .then(function(result) {loadtweets(result)})
+
   });
 });
 

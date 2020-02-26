@@ -3,11 +3,12 @@
 }
 
 article:hover .handle {
-  display: block
+  color:  rgb(42, 190, 104);
+  display: block;
 }
 
 article:hover {
-  box-shadow: 10px 10px black;
+  box-shadow: 10px 10px rgb(42, 190, 104);
 }
 
 article {

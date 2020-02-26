@@ -1,6 +1,5 @@
 // A page can't be manipulated safely until the document is "ready." jQuery detects this state of readiness for you.
 // Code included inside $(document).ready() will only run once the page Document Object Model(DOM) is ready for JavaScript code to execute
-
 const escape = function (str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
@@ -9,20 +8,25 @@ const escape = function (str) {
 
 $(document).ready(function () {
 
+  $("#new-tweet").hide()
+
   $("#click").click(function () {
+    $('#error').hide("slow")
+    $('#twit').val('')
     $("#new-tweet").slideToggle("slow", function () {
+      $('.counter').text(140).removeClass("invalid")
+
     });
   });
-
 
   const $form = $('#newbie');
   $form.on('submit', function (event) {
     event.preventDefault()
     if ($('#twit').val().length > 140) {
-      alert("Your tweet is too long!");
+      $('#error').text("⚠️ Your tweet is too long! ⚠️").toggle("slow")
       return;
     } else if ($('#twit').val() === "") {
-      alert("You haven't entered a tweet!");
+      $('#error').text("⚠️ You haven't entered a tweet! ⚠️").toggle("slow")
       return;
     }
     // Post serialized data to AJAX, to add new tweet
@@ -34,6 +38,7 @@ $(document).ready(function () {
       success: function() {
         $('#twit').val('')
         $('.counter').text(140)
+        $('#error').hide("slow")
         loadtweets();
       }
     });

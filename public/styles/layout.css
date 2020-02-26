@@ -38,3 +38,7 @@ body {
 img {
   border-radius: 50%;
 }
+
+#error {
+  display: none;
+}

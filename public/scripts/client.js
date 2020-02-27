@@ -11,7 +11,7 @@ $(document).ready(function () {
   $("#new-tweet").hide()
 
   $("#click").click(function () {
-    $("#new-tweet").slideToggle(800, function () {
+    $("#new-tweet").show(800, function () {
       $('.counter').text(140).removeClass("invalid")
       $('#twit').val('')
       $('#error').hide("slow")
@@ -38,7 +38,7 @@ $(document).ready(function () {
         $('#twit').val('')
         $('.counter').text(140)
         $('#error').hide("slow")
-        $("#new-tweet").hide("slow")
+        $("#new-tweet").hide(800)
         loadtweets();
       }
     });

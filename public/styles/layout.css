@@ -11,20 +11,12 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
-
-/*
- * Global layout stuff
- */
-
 body {
   color: #545149;
   background-color: #f4f1ec;
   font-family: 'Source Sans Pro', 'sans-serif';
   font-size: 24px;
 }
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
 
 .container {
   background-color: #f4f1ec;
@@ -47,8 +39,8 @@ img {
 #scrollButton {
   display: none;
   position: fixed;
-  bottom: 15px;
-  right: 15px;
+  bottom: 20px;
+  right: 20px;
   z-index: 99;
   border: none;
   outline: none;

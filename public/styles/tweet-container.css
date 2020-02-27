@@ -2,16 +2,17 @@
   display: none;
 }
 
+article:hover {
+  box-shadow: 10px 10px rgb(42, 190, 104);
+}
+
 article:hover .handle {
   color:  rgb(42, 190, 104);
   display: block;
 }
 
-article:hover {
-  box-shadow: 10px 10px rgb(42, 190, 104);
-}
-
 article {
+  word-wrap: break-word;
   border: solid #545149 5px;
   margin: 50px 0;
 }
@@ -62,4 +63,3 @@ font-size: 18px;
 i {
   font-size: 18px;
 }
-

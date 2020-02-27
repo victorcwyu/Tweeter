@@ -24,28 +24,25 @@ nav {
 
 #newButton {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
-
 @keyframes bounce { 
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-5px); }
+  0% { transform: translateY(2.5px); }
+  100% { transform: translateY(-2.5px); }
 }
 
 #newButton img {
-  position: relative;
-  bottom: 15px;
-  animation: bounce 0.2s;
+  margin-left: 15px;
+  animation: bounce 0.1s;
   animation-direction: alternate;
   animation-iteration-count: infinite;
 }
 
-
 #newButton img:hover {
   box-shadow:
-    0 0 7.5px 3.75px #fff,  /* inner white */
-    0 0 12.5px 7.5px #f0f, /* middle magenta */
-    0 0 17.5px 11.25px #0ff; /* outer cyan */
+    0 0 7.5px 3.75px #fff,
+    0 0 12.5px 7.5px #f0f,
+    0 0 17.5px 11.25px #0ff;
 }

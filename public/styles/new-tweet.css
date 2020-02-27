@@ -1,7 +1,12 @@
+#new-tweet {
+  margin: 0 5px;
+}
+
 textarea {
   background-color: #f4f1ec;
   border: none;
   border-bottom: solid #545149 5px;
+  outline: none;
   font-weight: 700;
   height: 50px;
   width: 100%;
@@ -16,6 +21,7 @@ textarea {
 input {
   background-color: #4056A1;
   color: white;
+  outline: none;
   font-family: 'Bungee', 'sans-serif' ;
   font-size: 20px;
   padding: 5px 10px;

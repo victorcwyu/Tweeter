@@ -5,7 +5,9 @@
  */
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -20,7 +22,6 @@ body {
   font-family: 'Source Sans Pro', 'sans-serif';
   font-size: 24px;
 }
-
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
@@ -41,4 +42,23 @@ img {
 
 #error {
   display: none;
+}
+
+#scrollButton {
+  display: none;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+#scrollButton:hover {
+  box-shadow:
+    0 0 7.5px 3.75px #fff,  /* inner white */
+    0 0 12.5px 7.5px #f0f, /* middle magenta */
+    0 0 17.5px 11.25px #0ff; /* outer cyan */
 }

@@ -22,7 +22,7 @@ nav {
   font-weight: 700;
 }
 
-.newButton {
+#newButton {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,7 +34,7 @@ nav {
   100% { transform: translateY(-5px); }
 }
 
-.newButton img {
+#newButton img {
   position: relative;
   bottom: 15px;
   animation: bounce 0.2s;
@@ -43,9 +43,9 @@ nav {
 }
 
 
-.newButton img:hover {
+#newButton img:hover {
   box-shadow:
-    0 0 30px 15px #fff,  /* inner white */
-    0 0 50px 30px #f0f, /* middle magenta */
-    0 0 70px 45px #0ff; /* outer cyan */
+    0 0 7.5px 3.75px #fff,  /* inner white */
+    0 0 12.5px 7.5px #f0f, /* middle magenta */
+    0 0 17.5px 11.25px #0ff; /* outer cyan */
 }

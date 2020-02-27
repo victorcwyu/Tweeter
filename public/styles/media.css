@@ -1,0 +1,91 @@
+/* Styles for desktops with a width of 1024px and above */
+@media (min-width: 1024px) {
+  
+  #wrapper {
+    display: flex;
+    background-color: #002612;
+    background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+  }
+
+  .OG {
+    height: 100vh;
+    width: 40%;
+  }
+
+  .container {
+    width: 60%;
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #new-tweet {
+    width: 90%;
+    margin-top: 25px;
+  }
+
+  #tweet-container {
+    margin-top: 25px;
+    width: 90%;
+
+  }
+}
+
+/* Styles for tablets and devices with a width of 768px or below */
+@media (max-width: 768px) {
+
+  nav {
+    background-color: transparent;
+    text-shadow: 3px 3px #4056A1;
+  }
+
+  article footer {
+    flex-direction: column;
+  }
+  .linkage {
+    margin-bottom: 10px;
+  }
+}
+
+/* Styles for mobile phones with a width of 500px or below */
+@media (max-width: 500px) {
+  
+  .OG h1 {
+    font-size: 30px;
+  }
+
+  .logo {
+    font-size: 30px;
+  }
+
+  #newButton p {
+    font-size: 15px;
+  }
+
+  #newButton img {
+    bottom: -30px;
+  }
+
+}
+
+/* Styles for mobile phones with a width of 400px or below */
+@media (max-width: 400px) {
+  
+  .OG h1 {
+    font-size: 24px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  #newButton p {
+    font-size: 12px;
+  }
+
+  #newButton img {
+    bottom: -32.5px;
+  }
+
+}

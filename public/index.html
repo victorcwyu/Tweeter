@@ -17,16 +17,20 @@
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <!-- Tweet Header CSS -->
     <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css" />
+    <!-- Media CSS -->
+    <link rel="stylesheet" href="/styles/media.css" type="text/css" />
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
-    <!-- Character Counter JS -->
+    <!-- Character counter JS -->
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-    <!-- Scroll To Top Button JS -->
+    <!-- Scroll to top button JS -->
     <script type="text/javascript" src="/scripts/composer.js"></script>
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/76db24dbc3.js" crossorigin="anonymous"></script>
+    <!-- Disable viewport zooming -->
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
   </head>
   <body>
     <!-- Top nav bar (fixed) -->
@@ -35,34 +39,37 @@
       <div id="newButton">
         <p><span class ="bold-700">Write</span> a new tweet</p>
         <img id="click" src="/images/nic-cage.jpg">
-        <!-- <i class="fas fa-angle-double-down"></i> -->
       </div>
     </nav>
+
+    <!-- Wrapper for desktop styles -->
+    <div id="wrapper">
     <!-- Header -->
-    <header class="OG">
-      <div>
-        <img src="/images/iguana.jpg">
-      </div>
-      <br>
-      <div>
-        <h1>💚 <span class="bold-600">Iguanas</span> are the best 💚</h1>
-      </div>
-    </header>
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <!-- New Tweets Section -->
-      <section id="new-tweet">
-        <h2 id="error"></h2>
-        <form id="newbie" action="/tweets/" method="POST">
-          <textarea id="twit" name="text" placeholder="What are you humming about?"></textarea>
-          <input type="submit" value="Tweet">
-          <span class="counter">140</span>
-        </form>
-      </section>
-        <!-- Tweets Section -->
-      <section id="tweet-container">
-      </section>
-    </main>
+      <header class="OG">
+        <div>
+          <img src="/images/iguana.jpg">
+        </div>
+        <br>
+        <div>
+          <h1>💚 <span class="bold-600">Iguanas</span> are the best 💚</h1>
+        </div>
+      </header>
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+        <!-- New Tweets Section -->
+        <section id="new-tweet">
+          <h2 id="error"></h2>
+          <form id="newbie" action="/tweets/" method="POST">
+            <textarea id="twit" name="text" placeholder="What are you humming about?"></textarea>
+            <input type="submit" value="Tweet">
+            <span class="counter">140</span>
+          </form>
+        </section>
+          <!-- Tweets Section -->
+        <section id="tweet-container">
+        </section>
+      </main>
+    </div>
     <!-- <button id="scrollButton" title="Go to top">Top</button> -->
     <img id="scrollButton" src="/images/john-travolta.jpg">
   </body>

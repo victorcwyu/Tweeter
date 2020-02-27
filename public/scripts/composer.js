@@ -30,11 +30,12 @@ $(document).ready(function () {
   }
 
   $("#scrollButton").click(function () {
-      scrollToTop();
-      $("#new-tweet").show(1200, function () {
-        $('.counter').text(140).removeClass("invalid")
-        $('#twit').val('')
-        $('#error').hide("slow")
+    $('#twit').val('')  
+    $('.counter').text(140).removeClass("invalid")
+    $('#error').slideUp("slow")
+    scrollToTop();
+      $("#new-tweet").slideDown(1200, function () {
+        $("#twit").focus();
       });
   });
 })

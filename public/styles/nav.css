@@ -26,6 +26,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 @keyframes bounce { 
@@ -34,7 +35,8 @@ nav {
 }
 
 #newButton img {
-  margin-left: 15px;
+  position: absolute;
+  bottom: -17.5px;
   animation: bounce 0.1s;
   animation-direction: alternate;
   animation-iteration-count: infinite;
@@ -42,7 +44,7 @@ nav {
 
 #newButton img:hover {
   box-shadow:
-    0 0 7.5px 3.75px #fff,
-    0 0 12.5px 7.5px #f0f,
-    0 0 17.5px 11.25px #0ff;
+    0 0 3.75px 1.875px #fff,
+    0 0 6.25px 3.75px #f0f,
+    0 0 8.75px 5.625px #0ff;
 }

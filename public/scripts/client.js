@@ -8,13 +8,11 @@ const escape = function (str) {
 
 $(document).ready(function () {
 
-  $("#new-tweet").hide()
-
   $("#click").click(function () {
-    $("#new-tweet").show(800, function () {
-      $('.counter').text(140).removeClass("invalid")
-      $('#twit').val('')
-      $('#error').hide("slow")
+    $('#twit').val('')
+    $('.counter').text(140).removeClass("invalid")
+    $("#new-tweet").slideToggle(800, function () {
+      $("#twit").focus().autosize();
     });
   });
 
@@ -22,10 +20,10 @@ $(document).ready(function () {
   $form.on('submit', function (event) {
     event.preventDefault()
     if ($('#twit').val().length > 140) {
-      $('#error').text("⚠️ Your tweet is too long! ⚠️").show("slow")
+      $('#error').text("⚠️ Your tweet is too long! ⚠️").slideDown("slow")
       return;
     } else if ($('#twit').val() === "") {
-      $('#error').text("⚠️ You haven't entered a tweet! ⚠️").show("slow")
+      $('#error').text("⚠️ You haven't entered a tweet! ⚠️").slideDown("slow")
       return;
     }
     // Post serialized data to AJAX, to add new tweet
@@ -35,10 +33,10 @@ $(document).ready(function () {
       data: $form.serialize(),
       // successful post renders updated list of tweets
       success: function() {
-        $('#twit').val('')
-        $('.counter').text(140)
-        $('#error').hide("slow")
-        $("#new-tweet").hide(800)
+        $('#error').slideUp("slow")
+        $("#new-tweet").slideUp("slow")
+        // $('.counter').text(140)
+        // $('#twit').val('')
         loadtweets();
       }
     });
@@ -61,12 +59,31 @@ const loadtweets = function (tweets) {
 // loops through tweets
 // calls createTweetElement for each tweet
 // takes return value and appends it to the tweets container
-const renderTweets = function (tweets) {
-  tweets.forEach(element => {
-    //changed append to prepend => makes new tweets appear at top
-    $('#tweet-container').prepend(createTweetElement(element));
-  });
+
+
+const renderTweets = tweets => {
+  // clear out array before re-loading data
+  $('#tweet-container').empty();
+  //separates tweets into an array and then joins together, to limit page rendering performance issues
+  const markupArray = [];
+  for (const tweet of tweets) {
+    const tweetElement = createTweetElement(tweet);
+    markupArray.unshift(tweetElement);
+  }
+  markupArray.join("");
+  // takes a return value and prepends it to the tweets container
+  $("#tweet-container").prepend(markupArray);
 };
+
+
+
+//THIS IS ANOTHER WAY TO DO IT
+// const renderTweets = function (tweets) {
+//   tweets.forEach(element => {
+//     //changed append to prepend => makes new tweets appear at top
+//     $('#tweet-container').prepend(createTweetElement(element));
+//   });
+// };
 
 // takes in a tweet object and is responsible for returning a tweet <article> element containing the entire HTML structure of the tweet.
 const createTweetElement = (tweetData) => {

@@ -12,7 +12,7 @@ $(document).ready(function () {
     $('#twit').val('')
     $('.counter').text(140).removeClass("invalid")
     $("#new-tweet").slideToggle(800, function () {
-      $("#twit").focus().autosize();
+      $("#twit").focus();
     });
   });
 

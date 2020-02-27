@@ -11,11 +11,10 @@ $(document).ready(function () {
   $("#new-tweet").hide()
 
   $("#click").click(function () {
-    $('#error').hide("slow")
-    $('#twit').val('')
     $("#new-tweet").slideToggle("slow", function () {
       $('.counter').text(140).removeClass("invalid")
-
+      $('#twit').val('')
+      $('#error').hide("slow")
     });
   });
 
@@ -23,10 +22,10 @@ $(document).ready(function () {
   $form.on('submit', function (event) {
     event.preventDefault()
     if ($('#twit').val().length > 140) {
-      $('#error').text("⚠️ Your tweet is too long! ⚠️").toggle("slow")
+      $('#error').text("⚠️ Your tweet is too long! ⚠️").show("slow")
       return;
     } else if ($('#twit').val() === "") {
-      $('#error').text("⚠️ You haven't entered a tweet! ⚠️").toggle("slow")
+      $('#error').text("⚠️ You haven't entered a tweet! ⚠️").show("slow")
       return;
     }
     // Post serialized data to AJAX, to add new tweet

@@ -62,7 +62,6 @@ const renderTweets = tweets => {
 };
 
 
-// ****
 // Makes a get request, returns a promise, uses that result to render the tweets, passing in the result
 const loadtweets = function() {
   $.ajax('/tweets', { method: 'GET', dataType: 'JSON' })
@@ -89,11 +88,12 @@ $(document).ready(function() {
   // Display error messages if tweet has not been written, or if tweet is over 140 characters
   const $form = $('#newbie');
   $form.on('submit', function(event) {
+    $('#twit').val().trim();
     event.preventDefault();
-    if ($('#twit').val().length > 140) {
+    if ($('#twit').val().trim().length > 140) {
       $('#error').text('⚠️ Your tweet is too long! ⚠️').slideDown('slow');
       return;
-    } else if ($('#twit').val() === '') {
+    } else if ($('#twit').val().trim() === '') {
       $('#error').text('⚠️ You have not entered a tweet! ⚠️').slideDown('slow');
       return;
     }

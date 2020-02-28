@@ -10,5 +10,5 @@ Tweeter is a simple, single-page Twitter clone built with HTML, CSS, JS, jQuery 
 - Node 5.10.x or above
 
 ## Screenshots
-!['Screenshot of tweet compose box'] (https://github.com/victorcwyu/tweeter/blob/master/docs/tweeter-form.png?raw=true) 
-!['Screenshot of tweets'] (https://github.com/victorcwyu/tweeter/blob/master/docs/tweeter-tweets.png?raw=true)
+!["Screenshot of tweet compose box"] (https://github.com/victorcwyu/tweeter/blob/master/docs/tweeter-form.png?raw=true) 
+!["Screenshot of tweets"] (https://github.com/victorcwyu/tweeter/blob/master/docs/tweeter-tweets.png?raw=true)

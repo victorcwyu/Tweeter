@@ -1,62 +1,41 @@
-.handle {
+/* Styles for #tweet-container */
+.handle, .linkage {
   display: none;
 }
-
 article:hover {
   box-shadow: 10px 10px rgb(42, 190, 104);
 }
-
 article:hover .handle, article:hover .linkage {
-  color:  rgb(42, 190, 104);
   display: block;
+  color:  rgb(42, 190, 104);
 }
-
 article {
+  font-size: 18px;
   word-wrap: break-word;
   border: solid #545149 5px;
   margin: 50px 0;
-  font-size: 18px;
 }
-
-article header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+article header, article header p, article p {
   margin: 10px;
 }
-
+article header, article footer, .profile {
+  display: flex;
+  align-items: center;
+}
+article header, article footer {
+  justify-content: space-between;
+}
 article header h2 {
   color: white;
   font-weight: 300;
   margin: 0;
 }
-
-article header p {
+article header p, article footer p {
   border: none;
-  margin: 10px;
 }
-
-.profile {
-  display: flex;
-  align-items: center;
-}
-
 article p {
   border-bottom: solid #545149 5px;
-  margin: 10px;
 }
-
-article footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-article footer p {
-border: none;
-}
-
 .linkage {
   margin-right: 10px;
-  display: none;
 }

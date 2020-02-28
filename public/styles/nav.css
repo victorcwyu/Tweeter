@@ -1,6 +1,9 @@
-nav {
+/* Styles for navigation bar */
+nav, #new-button {
   display: flex;
   align-items: center;
+}
+nav {
   justify-content: space-between;
   background-color: #4056A1;
   color: #FFFFFF;
@@ -12,37 +15,29 @@ nav {
   left: 0;
   z-index: 1;
 }
-
-.logo {
+#logo {
   font-family: 'Bungee', 'sans-serif' ;
   font-size: 36px;
 }
-
-.bold-700 {
+#bold-700 {
   font-weight: 700;
 }
-
-#newButton {
-  display: flex;
-  align-items: center;
+#new-button {
   justify-content: center;
   position: relative;
 }
-
 @keyframes bounce { 
   0% { transform: translateY(2.5px); }
   100% { transform: translateY(-2.5px); }
 }
-
-#newButton img {
+#new-button img {
   position: absolute;
   bottom: -17.5px;
   animation: bounce 0.1s;
   animation-direction: alternate;
   animation-iteration-count: infinite;
 }
-
-#newButton img:hover {
+#new-button img:hover {
   box-shadow:
     0 0 3.75px 1.875px #fff,
     0 0 6.25px 3.75px #f0f,

@@ -1,8 +1,8 @@
+/* Styles for new tweet form */
 #new-tweet {
   display: none;
   margin: 0 5px;
 }
-
 textarea {
   background-color: #f4f1ec;
   border: none;
@@ -14,11 +14,9 @@ textarea {
   resize: none;
   margin-bottom: 5px;
 }
-
 ::placeholder {
   color: #545149;
 }
-
 input {
   background-color: #4056A1;
   color: white;
@@ -27,23 +25,20 @@ input {
   font-size: 20px;
   padding: 5px 10px;
 }
-
-form {
+form, #error {
   margin-top: 50px;
+}
+form {
   position: relative;
 }
-
 .counter {
   font-family: 'Bungee', 'sans-serif' ;
   position: absolute;
   right: 0;
 }
-
 .invalid {
   color: red;
 }
-
 #error {
   display: none;
-  margin-top: 50px;
 }

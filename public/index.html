@@ -1,76 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
   <head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
     <!-- External CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css' type='text/css' />
     <!-- External Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i&display=swap' rel='stylesheet'>
     <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel='stylesheet' href='/styles/layout.css' type='text/css' />
     <!-- Nav CSS -->
-    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel='stylesheet' href='/styles/nav.css' type='text/css' />
     <!-- Header CSS -->
-    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel='stylesheet' href='/styles/header.css' type='text/css' />
     <!-- Form CSS -->
-    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel='stylesheet' href='/styles/new-tweet.css' type='text/css' />
     <!-- Tweet Header CSS -->
-    <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css" />
+    <link rel='stylesheet' href='/styles/tweet-container.css' type='text/css' />
     <!-- Media CSS -->
-    <link rel="stylesheet" href="/styles/media.css" type="text/css" />
+    <link rel='stylesheet' href='/styles/media.css' type='text/css' />
     <!-- External JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
     <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type='text/javascript' src='/scripts/client.js'></script>
     <!-- Character counter JS -->
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <script type='text/javascript' src='/scripts/composer-char-counter.js'></script>
     <!-- Scroll to top button JS -->
-    <script type="text/javascript" src="/scripts/composer.js"></script>
+    <script type='text/javascript' src='/scripts/composer.js'></script>
     <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/76db24dbc3.js" crossorigin="anonymous"></script>
+    <script src='https://kit.fontawesome.com/76db24dbc3.js' crossorigin='anonymous'></script>
     <!-- Disable viewport zooming -->
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
   </head>
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span class="logo">tweeter</span>
-      <div id="newButton">
-        <p><span class ="bold-700">Write</span> a new tweet</p>
-        <img id="click" src="/images/nic-cage.jpg">
+      <span id='logo'>tweeter</span>
+      <div id='new-button'>
+        <p><span id='bold-700'>Write</span> a new tweet</p>
+        <img id='click' src='/images/nic-cage.jpg'>
       </div>
     </nav>
-
     <!-- Wrapper for desktop styles -->
-    <div id="wrapper">
+    <div id='wrapper'>
     <!-- Header -->
-      <header class="OG">
+      <header id='OG'>
         <div>
-          <img src="/images/iguana.jpg">
+          <img src='/images/iguana.jpg'>
         </div>
         <br>
         <div>
-          <h1>💚 <span class="bold-600">Iguanas</span> are the best 💚</h1>
+          <h1>💚 <span>Iguanas</span> are the best 💚</h1>
         </div>
       </header>
       <!-- Page-specific (main) content here -->
-      <main class="container">
+      <main class='container'>
         <!-- New Tweets Section -->
-        <section id="new-tweet">
-          <h2 id="error"></h2>
-          <form id="newbie" action="/tweets/" method="POST">
-            <textarea id="twit" name="text" placeholder="What are you humming about?"></textarea>
-            <input type="submit" value="Tweet">
-            <span class="counter">140</span>
+        <section id='new-tweet'>
+          <h2 id='error'></h2>
+          <form id='newbie' action='/tweets/' method='POST'>
+            <textarea id='twit' name='text' placeholder='What are you humming about?'></textarea>
+            <input type='submit' value='Tweet'>
+            <span class='counter'>140</span>
           </form>
         </section>
-          <!-- Tweets Section -->
-        <section id="tweet-container">
+          <!-- Tweets Section, to be rendered upon form submission -->
+        <section id='tweet-container'>
         </section>
       </main>
     </div>
-    <!-- <button id="scrollButton" title="Go to top">Top</button> -->
-    <img id="scrollButton" src="/images/john-travolta.jpg">
+    <!-- <button id='scrollButton' title='Go to top'>Top</button> -->
+    <img id='scroll-button' src='/images/john-travolta.jpg'>
   </body>
 </html>

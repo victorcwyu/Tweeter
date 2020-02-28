@@ -1,42 +1,33 @@
-/*
+/* Styles for general layout
  * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
 html {
   box-sizing: border-box;
-  scroll-behavior: smooth;
 }
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
+body, .container {
+  background-color: #f4f1ec;
+}
 body {
   color: #545149;
-  background-color: #f4f1ec;
   font-family: 'Source Sans Pro', 'sans-serif';
   font-size: 24px;
 }
-
 .container {
-  background-color: #f4f1ec;
-  margin: 0 auto;
   width: 90%;
+  margin: 0 auto;
 }
-
-.bold-600 {
+div span {
   font-weight: 600;
 }
-
 img {
   border-radius: 50%;
 }
-
-#error {
-  display: none;
-}
-
-#scrollButton {
+#scroll-button {
   display: none;
   position: fixed;
   bottom: 20px;
@@ -51,14 +42,12 @@ img {
   animation-iteration-count: infinite;
   animation-timing-function: linear; 
 }
-
-#scrollButton:hover {
+#scroll-button:hover {
   box-shadow:
-    0 0 7.5px 3.75px #fff,  /* inner white */
-    0 0 12.5px 7.5px #f0f, /* middle magenta */
-    0 0 17.5px 11.25px #0ff; /* outer cyan */
+    0 0 7.5px 3.75px #fff,
+    0 0 12.5px 7.5px #f0f,
+    0 0 17.5px 11.25px #0ff;
 }
-
 @keyframes spin {
     from {
         transform:rotate(0deg);

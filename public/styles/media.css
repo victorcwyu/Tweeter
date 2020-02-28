@@ -1,45 +1,37 @@
 /* Styles for desktops with a width of 1024px and above */
 @media (min-width: 1024px) {
-  
-  #wrapper {
+  #wrapper, .container {
     display: flex;
+  }
+  #wrapper {
     background-color: #002612;
     background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
   }
-
-  .OG {
+  #OG {
     height: 100vh;
     width: 40%;
   }
-
   .container {
-    width: 60%;
-    margin-top: 90px;
-    display: flex;
     flex-direction: column;
     align-items: center;
+    width: 60%;
+    margin-top: 90px;
   }
-
-  #new-tweet {
+  #new-tweet, #tweet-container {
     width: 90%;
     margin-top: 25px;
   }
-
-  #tweet-container {
-    margin-top: 25px;
-    width: 90%;
-
+  #newbie {
+    margin-top: 75px;
   }
 }
 
 /* Styles for tablets and devices with a width of 768px or below */
 @media (max-width: 768px) {
-
   nav {
     background-color: transparent;
     text-shadow: 3px 3px #4056A1;
   }
-
   article footer {
     flex-direction: column;
   }
@@ -50,41 +42,29 @@
 
 /* Styles for mobile phones with a width of 500px or below */
 @media (max-width: 500px) {
-  
-  .OG h1 {
+  #OG h1, #logo {
     font-size: 30px;
   }
-
-  .logo {
-    font-size: 30px;
-  }
-
-  #newButton p {
+  #new-button p {
     font-size: 15px;
   }
-
-  #newButton img {
+  #new-button img {
     bottom: -30px;
   }
-
+  textarea {
+    font-size: 18px;
+  }
 }
 
 /* Styles for mobile phones with a width of 400px or below */
 @media (max-width: 400px) {
-  
-  .OG h1 {
+  #OG h1, #logo {
     font-size: 24px;
   }
-
-  .logo {
-    font-size: 24px;
-  }
-
-  #newButton p {
+  #new-button p {
     font-size: 12px;
   }
-
-  #newButton img {
+  #new-button img {
     bottom: -32.5px;
   }
 
